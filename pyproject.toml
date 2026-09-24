@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "watchserver"
+version = "0.1.0"
+description = "CLI Linux server health monitoring learning project."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["psutil>=5.9,<7"]
+
+[project.scripts]
+watchserver = "watchserver.cli.commands:main"
+
+[tool.setuptools.packages.find]
+include = ["watchserver*"]
